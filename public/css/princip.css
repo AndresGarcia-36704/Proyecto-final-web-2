@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f1f6; /* Fondo suave rosado */
+    color: #333; /* Texto oscuro */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f9bee4; /* Rosa suave */
+    border-bottom: 2px solid #f08ccd; /* Rosa más claro */
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff69b4 !important; /* Rosa más fuerte al pasar el mouse */
+}
+
+/* Título principal */
+h1 {
+    color: #c75d80; /* Rosa oscuro */
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #f78fb3; /* Rosa claro */
+    border-color: #f78fb3;
+}
+
+.btn-primary:hover {
+    background-color: #f06292;
+    border-color: #f06292;
+}
+
+.btn-success {
+    background-color: #ff85a1; /* Rosa pastel */
+    border-color: #ff85a1;
+}
+
+.btn-success:hover {
+    background-color: #f56c80;
+    border-color: #f56c80;
+}
+
+.btn-warning {
+    background-color: #ffb3c1; /* Rosa suave */
+    border-color: #ffb3c1;
+}
+
+.btn-warning:hover {
+    background-color: #ff9aa2;
+    border-color: #ff9aa2;
+}
+
+.btn-danger {
+    background-color: #f24b7e; /* Rosa fuerte */
+    border-color: #f24b7e;
+}
+
+.btn-danger:hover {
+    background-color: #e04066;
+    border-color: #e04066;
+}
+
+/* Tabla de productos */
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #f5e1f0; /* Rosa claro */
+    color: #c75d80;
+}
+
+.table td {
+    color: #555;
+}
+
+.table-bordered {
+    border: 1px solid #f1c7d6; /* Rosa pálido */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fdf2f6; /* Rosa muy suave */
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Modal */
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #f78fb3; /* Rosa claro */
+    color: white;
+}
+
+.modal-footer {
+    background-color: #f5e1f0; /* Rosa claro */
+}
+
+.form-label {
+    font-weight: bold;
+    color: #c75d80;
+}
+
+/* Formulario */
+.modal-body .form-control {
+    border-radius: 5px;
+}
+
+.modal-body .form-check-label {
+    font-weight: normal;
+}
+
+/* Tiempos de transición */
+.btn, .modal-content, .navbar {
+    transition: all 0.3s ease;
+}
+
+/* Estilo para enlaces */
+a {
+    color: #ff69b4; /* Rosa brillante */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f06292;
+}
+
+/* Personalización del texto en el carrito */
+.message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c75d80;
+}

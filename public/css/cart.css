@@ -1,0 +1,197 @@
+/* Estilos generales para el cuerpo y el encabezado */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f2f4; /* Beige suave */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #e91e63; /* Rosa suave */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+/* Estilo para la tabla del carrito */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #f8bbd0; /* Rosa claro */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+th {
+    background-color: #fce4ec; /* Rosa pálido */
+    color: #e91e63; /* Rosa suave */
+}
+
+td {
+    background-color: #fff;
+}
+
+td:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Resumen del carrito */
+.cart-summary {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #f8bbd0; /* Rosa claro */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.cart-summary h3 {
+    font-size: 28px;
+    color: #e91e63;
+}
+
+/* Estilo para el botón de finalizar compra */
+.button {
+    display: inline-block;
+    background-color: #e91e63; /* Rosa suave */
+    color: white;
+    padding: 14px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #c2185b; /* Rosa más oscuro */
+}
+
+/* Estilo para el botón de "Seguir comprando" */
+.go-back {
+    background-color: #9e9d24; /* Beige-morado suave */
+    margin-top: 10px;
+}
+
+.go-back:hover {
+    background-color: #7f7d19; /* Beige-morado más oscuro */
+}
+
+/* Estilo para el modal */
+.modal-toggle {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 100px;
+}
+
+.modal-toggle:checked + .modal {
+    display: block;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilo para el formulario dentro del modal */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #f85c90; /* Rosa suave */
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #e85791;
+}
+
+/* Estilo para los mensajes cuando el carrito está vacío */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    margin-top: 20px;
+}

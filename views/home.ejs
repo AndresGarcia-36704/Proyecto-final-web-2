@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Store</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Makeup Shop</h1>
+            <a href="http://localhost:3000/auth/login" class="btn-login">¿You are Admin?</a>
+        </div>
+    </header>    
+
+    <main>
+        <h1>Welcome to the Makeup Store</h1>
+        <% if (categories && categories.length > 0) { %>
+            <% categories.forEach(category => { %>
+                <section class="category">
+                    <h2><%= category.name %></h2>
+                    <div class="products">
+                        <% category.products.forEach(product => { %>
+                            <div class="product">
+                                <h3><%= product.name %></h3>
+                                <img src="/images/<%= product.imagePath %>" alt="<%= product.name %>" class="product-image">
+                                <p>$<%= product.price %></p>
+                                <form action="/cart/add" method="post">
+                                    <input type="hidden" name="productId" value="<%= product.id %>">
+                                    <button type="submit">Add to Cart</button>
+                                </form>                            
+                            </div>
+                        <% }) %>
+                    </div>
+                </section>
+            <% }) %>
+        <% } else { %>
+            <p>No products available.</p>
+        <% } %>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Makeup Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

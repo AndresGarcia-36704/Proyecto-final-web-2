@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5f8;
+    color: #333;
+}
+
+header {
+    background-color: #f8e5ec;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #f477a5;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #fff;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+table th {
+    background-color: #f8bbd0;
+    color: #4e4d4d;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #fce4ec;
+}
+
+table tr:hover {
+    background-color: #ffe7ef;
+    color: #868181;
+}
+
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.status.Pending {
+    background-color: #ffd740;
+    color: #5d4037;
+}
+
+.status.Completed {
+    background-color: #81c784;
+    color: white;
+}
+
+.status.Shipped {
+    background-color: #42a5f5;
+    color: white;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    background-color: #fce4ec;
+}
+
+footer a {
+    color: #efe0e5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+button {
+    background-color: #e89ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f1b5cf;
+}

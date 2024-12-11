@@ -1,0 +1,36 @@
+{
+  "name": "2.proyecto-web",
+  "version": "0.0.1",
+  "description": "Desarrollo del Proyecto de Programación Web 2 - Tienda de Maquillaje",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "makeup"
+  ],
+  "author": "Maria José Cordón Vasco",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "joi": "^17.13.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "pgtools": "^1.0.1",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
