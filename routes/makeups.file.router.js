@@ -6,7 +6,6 @@ export const makeupsFileRouter = express.Router();
 makeupsFileRouter.get("/", (req, res) => {
     let Makeups = read();
     let done = req.query.done;
-    //Cambiar done de string a boolean
     if (done === 'true') {
         done = true;
     } else if (done === 'false') {
@@ -39,9 +38,7 @@ makeupsFileRouter.post('/',
         id: Makeups.length + 1
     }
     Makeups.push(makeup);
-    //fs.writeFileSync('Makeups.json', JSON.stringify(Makeups));
     write(Makeups);
-    //Código HTTP 201 Created
     res.status(201).json(Makeups);
 })
 
@@ -65,16 +62,13 @@ makeupsFileRouter.put('/:id',
         const Makeups = read();
         let makeup = Makeups.find(makeup => makeup.id === parseInt(req.params.id));
         if (makeup) {
-            //Actualizar makeup
             makeup = {
                 ...makeup,
                 ...req.body
             }
-            //Actualizar makeup en el array
             Makeups[
                 Makeups.findIndex(makeup => makeup.id === parseInt(req.params.id))
             ] = makeup;
-            //fs.writeFileSync('Makeups.json', JSON.stringify(Makeups));
             write(Makeups);
             res.json(makeup);
         } else {
@@ -98,12 +92,10 @@ makeupsFileRouter.delete('/:id', (req, res) => {
     const Makeups = read();
     const makeup = Makeups.find(makeup => makeup.id === parseInt(req.params.id));
     if (makeup) {
-        //Eliminar makeup
         Makeups.splice(
             Makeups.findIndex(makeup => makeup.id === parseInt(req.params.id)),
             1
         );
-        //fs.writeFileSync('Makeups.json', JSON.stringify(Makeups));
         write(Makeups);
         res.json(makeup);
     } else {

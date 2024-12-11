@@ -82,14 +82,13 @@ cartRouter.post('/checkout', async (req, res) => {
             lastName,
             address,
             phone,
-            cart: JSON.stringify(cart),  // Guardar el carrito como JSON
-            status: 'Pending',  // Estado inicial del pedido
+            cart: JSON.stringify(cart), 
+            status: 'successful', 
         });
 
         // Limpiar el carrito después de realizar el pedido
         req.session.cart = {};
 
-        // Redirigir al usuario o mostrar mensaje de éxito
         res.render('cart', {
             message: "Pedido realizado con éxito. ¡Gracias por tu compra!",
             cart: req.session.cart || {},

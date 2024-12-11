@@ -52,59 +52,36 @@
             <div class="col-12 mb-3 text-end">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#makeupModal"
                     onclick="openMakeupModal()">
-                    Agregar Makeup
+                    Agregar Makeup +
                 </button>
             </div>
 
             <!-- Link to Orders page -->
             <div class="col-12 mb-3 text-end">
-                <a href="/admin/orders" class="btn btn-success">Ver Pedidos</a>
+                <a href="/admin/orders" class="btn btn-success">Ver Pedidos >></a>
             </div>
 
-            <!-- Makeup Table -->
+            <!-- Link to Products page (ruta principal) -->
+            <div class="col-12 mb-3 text-end">
+                <a href="/" class="btn btn-success"><< Ver Productos</a>  <!-- Botón para ver los productos -->
+            </div>
+
+            <!-- Makeup Cards -->
             <div class="col-12">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Categoría</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Url Imagen</th>
-                            <th scope="col">En Stock</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% (makeups || []).forEach(makeup=> { %>
-                            <tr>
-                                <th scope="row">
-                                    <%= makeup.id %>
-                                </th>
-                                <td>
-                                    <%= makeup.name %>
-                                </td>
-                                <td>
-                                    <%= makeup.brand || 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= makeup.price ? `$${makeup.price}` : 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= makeup.category || 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= makeup.description || 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= makeup.imagePath || 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= makeup.done ? '✅' : '🚫' %>
-                                </td>
-                                <td>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <% (makeups || []).forEach(makeup => { %>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= makeup.name %></h5>
+                                    <p class="card-text"><strong>Marca:</strong> <%= makeup.brand || 'N/A' %></p>
+                                    <p class="card-text"><strong>Precio:</strong> <%= makeup.price ? `$${makeup.price}` : 'N/A' %></p>
+                                    <p class="card-text"><strong>Categoría:</strong> <%= makeup.category || 'N/A' %></p>
+                                    <p class="card-text"><strong>Descripción:</strong> <%= makeup.description || 'N/A' %></p>
+                                    <p class="card-text"><strong>Imagen:</strong> <%= makeup.imagePath || 'N/A' %></p>
+                                    <p class="card-text"><strong>En Stock:</strong> <%= makeup.done ? '✅' : '🚫' %></p>
+                                </div>
+                                <div class="card-footer text-end">
                                     <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#makeupModal"
                                         onclick="openMakeupModal(<%= makeup.id %>, '<%= makeup.name %>', '<%= makeup.brand %>', <%= makeup.price %>, '<%= makeup.category %>', '<%= makeup.description %>', <%= makeup.done %>, '<%= makeup.imagePath %>')">
@@ -114,11 +91,11 @@
                                         onsubmit="return confirm('¿Estás seguro de eliminar este makeup?')">
                                         <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                     </form>
-                                </td>
-                            </tr>
-                            <% }) %>
-                    </tbody>
-                </table>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
             </div>
         </div>
 

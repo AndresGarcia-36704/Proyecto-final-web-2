@@ -13,10 +13,10 @@ router.post('/admin/orders', async (req, res) => {
             productId,
             quantity,
             totalPrice,
-            status: 'Pending', // O el estado que corresponda
+            status: 'successful', 
         });
 
-        res.redirect('/admin/orders'); // Redirige a la lista de pedidos
+        res.redirect('/admin/orders'); 
     } catch (error) {
         console.error('Error al crear el pedido:', error);
         res.status(500).send('Hubo un error al guardar el pedido.');

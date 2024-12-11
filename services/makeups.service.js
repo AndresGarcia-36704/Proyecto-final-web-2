@@ -82,7 +82,6 @@ async function getProductsGroupedByCategory() {
         });
     });
 
-    // Convertir objeto a arreglo
     return Object.values(categories);
 }
 

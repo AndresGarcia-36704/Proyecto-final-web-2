@@ -28,7 +28,7 @@ export function defineOrders(sequelize) {
         },
         status: {
             type: DataTypes.STRING,
-            defaultValue: 'Pending', 
+            defaultValue: 'successful', 
         }
     });
 

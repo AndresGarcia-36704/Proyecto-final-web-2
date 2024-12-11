@@ -7,6 +7,7 @@ import { configurePassport } from './config/passport.js';
 import { cartRouter } from "./routes/cart.router.js";
 import path from 'path';
 import adminRouter from './routes/admin.router.js';  
+import { makeupsRouter } from './routes/makeups.router.js'; // Asegúrate de que la ruta sea correcta
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -30,6 +31,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use('/api/v1/makeups', makeupsRouter); // Asocia las rutas al prefijo correcto
 
 configurePassport(app);
 

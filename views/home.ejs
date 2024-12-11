@@ -10,12 +10,12 @@
     <header>
         <div class="header-content">
             <h1>Makeup Shop</h1>
-            <a href="http://localhost:3000/auth/login" class="btn-login">¿You are Admin?</a>
+            <a href="http://localhost:3000/auth/login" class="btn-login">¿You are Admin? 👤</a>
         </div>
     </header>    
 
     <main>
-        <h1>Welcome to the Makeup Store</h1>
+        <h1>Welcome to the Makeup Store 💄</h1>
         <% if (categories && categories.length > 0) { %>
             <% categories.forEach(category => { %>
                 <section class="category">
@@ -28,7 +28,7 @@
                                 <p>$<%= product.price %></p>
                                 <form action="/cart/add" method="post">
                                     <input type="hidden" name="productId" value="<%= product.id %>">
-                                    <button type="submit">Add to Cart</button>
+                                    <button type="submit">Add to Cart 🛒</button>
                                 </form>                            
                             </div>
                         <% }) %>
