@@ -5,24 +5,24 @@ const name = Joi.string().min(5).max(255);
 const done = Joi.boolean();
 const imagePath = Joi.string().uri();
 
-const createMakeupSchema = Joi.object({
+const createProductSchema = Joi.object({
     name: name.required(),
     done: done.optional(),
-    imagePath: imagePath.optional(), 
+    imagePath: imagePath.optional(),
 });
 
-const updateMakeupSchema = Joi.object({
+const updateProductSchema = Joi.object({
     name: name.optional(),
     done: done.optional(),
-    imagePath: imagePath.optional(), 
+    imagePath: imagePath.optional(),
 });
 
-const getMakeupSchema = Joi.object({
+const getProductSchema = Joi.object({
     id: id.required(),
 });
 
 export {
-    createMakeupSchema,
-    updateMakeupSchema,
-    getMakeupSchema,
+    createProductSchema,
+    updateProductSchema,
+    getProductSchema,
 };

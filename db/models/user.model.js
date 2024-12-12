@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 
-export function defineUsers(sequelize){
-    sequelize.define('user', {
+export function defineUsers(sequelize) {
+    sequelize.define('User', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -14,6 +14,10 @@ export function defineUsers(sequelize){
         password: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
-    })
+    });
 }

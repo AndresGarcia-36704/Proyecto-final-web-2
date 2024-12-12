@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 
-export function defineMakeups(sequelize){
-    sequelize.define('Makeup', {
+export function defineProducts(sequelize) {
+    sequelize.define('Product', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -10,11 +10,6 @@ export function defineMakeups(sequelize){
         name: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        done: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false
         },
         brand: {
           type: DataTypes.STRING,
@@ -38,5 +33,4 @@ export function defineMakeups(sequelize){
           defaultValue: 'images/default.jpeg' 
         }
     })
-    
-};
+}

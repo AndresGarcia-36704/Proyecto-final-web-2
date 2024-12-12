@@ -1,19 +1,19 @@
 import express from "express";
-import { makeupsFileRouter } from "./makeups.file.router.js";
-import { makeupsRouter } from "./makeups.router.js";
-import { makeupsViewsRouter } from "./makeups.views.router.js";
+import { accessoriesFileRouter } from "./productsFileRouter.js";
+import { accessoriesRouter } from "./productsRouter.js";
+import { accessoriesViewsRouter } from "./productsViewsRouter.js";
 import { authRouter } from "./auth.router.js";
 
-export function routerMakeups(app) {
+export function routerAccessories(app) {
     app.use("/auth", authRouter);
 
-    app.use("/makeups", makeupsViewsRouter);
+    app.use("/accessories", accessoriesViewsRouter);
 
     const apiRouter = express.Router();
-    apiRouter.use("/file/makeups", makeupsFileRouter);
-    apiRouter.use("/makeups", makeupsRouter);
+    apiRouter.use("/file/accessories", accessoriesFileRouter);
+    apiRouter.use("/accessories", accessoriesRouter);
 
     app.use("/api/v1", apiRouter);
 
-    app.use("/", makeupsViewsRouter);
+    app.use("/", accessoriesViewsRouter);
 }

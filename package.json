@@ -1,7 +1,7 @@
 {
-  "name": "2.proyecto-web",
+  "name": "tech-accessories-store",
   "version": "0.0.1",
-  "description": "Desarrollo del Proyecto de Programación Web 2 - Tienda de Maquillaje",
+  "description": "Desarrollo del Proyecto de Programación Web 2 - Tienda de Accesorios Tecnológicos",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,9 +12,9 @@
   "keywords": [
     "node",
     "js",
-    "makeup"
+    "tech accessories"
   ],
-  "author": "Maria José Cordón Vasco",
+  "author": "andres.g",
   "license": "ISC",
   "dependencies": {
     "dayjs": "^1.11.13",

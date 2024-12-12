@@ -18,7 +18,7 @@ cartRouter.post('/add', async (req, res) => {
 
     try {
         // Obtener el producto de la base de datos usando productId
-        const product = await sequelize.models.Makeup.findByPk(productId);
+        const product = await sequelize.models.Product.findByPk(productId); // Usamos 'Product' en lugar de 'Makeup'
 
         // Si el producto no existe, lanzamos un error
         if (!product) {
@@ -30,19 +30,19 @@ cartRouter.post('/add', async (req, res) => {
             return res.status(500).json({ error: 'Precio del producto no válido' });
         }
 
-        // Si el producto ya está en el carrito, aumentamos la canidad
+        // Si el producto ya está en el carrito, aumentamos la cantidad
         if (req.session.cart[productId]) {
             req.session.cart[productId].quantity += 1;
         } else {
             req.session.cart[productId] = {
-                name: product.name,  
-                price: price,         
-                quantity: 1           
+                name: product.name,
+                price: price,
+                quantity: 1
             };
         }
 
         console.log(`Producto ${productId} agregado al carrito`);
-        res.redirect('/cart');  
+        res.redirect('/cart'); // Redirige al carrito después de añadir el producto
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Error al agregar el producto al carrito' });
@@ -58,14 +58,15 @@ cartRouter.get("/", (req, res) => {
     const cart = req.session.cart || {};
 
     let total = 0;
+    // Calcula el total sumando los precios de cada artículo en el carrito
     Object.values(cart).forEach(item => {
-        total += item.price * item.quantity; 
+        total += item.price * item.quantity;
     });
 
-    res.render('cart', { 
+    res.render('cart', {
         message: "Productos en tu carrito",
         cart,
-        total: total.toFixed(2)  
+        total: total.toFixed(2)  // Total con dos decimales
     });
 });
 
@@ -82,13 +83,14 @@ cartRouter.post('/checkout', async (req, res) => {
             lastName,
             address,
             phone,
-            cart: JSON.stringify(cart), 
-            status: 'successful', 
+            cart: JSON.stringify(cart), // Guardamos el carrito como un JSON
+            status: 'successful', // Estado del pedido
         });
 
         // Limpiar el carrito después de realizar el pedido
         req.session.cart = {};
 
+        // Renderizamos una vista de confirmación de pedido
         res.render('cart', {
             message: "Pedido realizado con éxito. ¡Gracias por tu compra!",
             cart: req.session.cart || {},

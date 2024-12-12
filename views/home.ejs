@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup Store</title>
+    <title>Tienda de Accesorios Tecnológicos</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Makeup Shop</h1>
-            <a href="http://localhost:3000/auth/login" class="btn-login">¿You are Admin? 👤</a>
+            <h1>Tienda de Accesorios Tecnológicos</h1>
+            <a href="http://localhost:3000/auth/login" class="btn-login">¿Eres Administrador? 👤</a>
         </div>
     </header>    
 
     <main>
-        <h1>Welcome to the Makeup Store 💄</h1>
+        <h1>Bienvenido a la Tienda de Accesorios Tecnológicos</h1>
         <% if (categories && categories.length > 0) { %>
             <% categories.forEach(category => { %>
                 <section class="category">
@@ -28,7 +28,7 @@
                                 <p>$<%= product.price %></p>
                                 <form action="/cart/add" method="post">
                                     <input type="hidden" name="productId" value="<%= product.id %>">
-                                    <button type="submit">Add to Cart 🛒</button>
+                                    <button type="submit">Añadir al Carrito 🛒</button>
                                 </form>                            
                             </div>
                         <% }) %>
@@ -36,12 +36,12 @@
                 </section>
             <% }) %>
         <% } else { %>
-            <p>No products available.</p>
+            <p>No hay productos disponibles.</p>
         <% } %>
     </main>
 
     <footer>
-        <p>&copy; 2024 Makeup Shop. All rights reserved.</p>
+        <p>&copy; 2024 Tienda de Accesorios Tecnológicos. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

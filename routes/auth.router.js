@@ -1,50 +1,19 @@
-import express from "express";
-import passport from "passport";
+import express from 'express';
+import { signup } from '../services/auth.service.js';
 
-import { signup } from "../services/auth.service.js";
+const router = express.Router();
 
-export const authRouter = express.Router();
+// Ruta para crear un nuevo usuario (signup)
+router.post('/signup', async (req, res) => {
+    const { username, password } = req.body;
 
-// Ruta para mostrar el formulario de login
-authRouter.get("/login", (req, res) => {
-    res.render("auth/login");
-});
-
-// Ruta para mostrar el formulario de registro
-authRouter.get("/signup", (req, res) => {
-    res.render("auth/signup");
-});
-
-// Manejar la autenticación de login con Passport
-authRouter.post(
-    "/login",
-    passport.authenticate("local", {
-        failureRedirect: "/auth/login", 
-        failureFlash: true, 
-    }),
-    (req, res) => {
-        res.redirect("/makeups/list"); 
-    }
-);
-
-// Ruta para manejar el logout
-authRouter.get("/logout", (req, res, next) => {
-    req.logout((err) => {
-        if (err) {
-            return next(err);
-        }
-        res.redirect("/auth/login"); 
-    });
-});
-
-// Manejar el registro de nuevos usuarios
-authRouter.post("/signup", async (req, res) => {
     try {
-        const { username, password } = req.body;
-        await signup(username, password); 
-        res.redirect("/auth/login"); 
+        const user = await signup(username, password);
+        res.status(201).json({ message: 'Usuario creado exitosamente', user });
     } catch (error) {
-        console.error(error);
-        res.redirect("/auth/signup"); 
+        console.error("Error en POST /signup:", error);
+        res.status(500).send("Error al crear el usuario.");
     }
 });
+
+export default router;

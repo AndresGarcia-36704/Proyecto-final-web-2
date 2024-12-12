@@ -1,11 +1,9 @@
-import { defineMakeups } from './makeups.model.js'
-import { defineOrders } from './order.model.js'
-import { defineUsers } from './users.model.js'
+import { defineProducts } from './products.model.js'; 
+import { defineOrders } from './order.model.js'; 
+import { defineCustomers } from './user.model.js'; 
 
-export function defineModels(sequelize){
-    defineMakeups(sequelize)
-    defineUsers(sequelize)
-    defineOrders(sequelize)
+export function defineModels(sequelize) {
+    defineProducts(sequelize); 
+    defineCustomers(sequelize); 
+    defineOrders(sequelize); 
 }
-
-
