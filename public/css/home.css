@@ -1,71 +1,70 @@
 /* Reset para asegurar consistencia */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  }
-  
-  /* Estilado general */
-  body {
-	font-family: 'Arial', sans-serif;
-	background: linear-gradient(to bottom, #ffe1e1, #fff0f5);
-	color: #333;
-  }
-  
-  /* Contenedor Principal Home */
-  .todohome {
-	margin: 130px 0 40px 0;
-	position: relative;
-  }
-  
-  /* Título principal con tipografía grande y centrada */
-  .todohome h1 {
-	position: absolute;
-	top: -140px;
-	width: 100%;
-	font-size: 80px;
-	font-weight: 200;
-	text-align: center;
-	color: #d83f45;
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	text-rendering: optimizeLegibility;
-  }
-  
-  /* Sección principal con espaciado y centrado */
-  .todohome section {
-	padding-top: 10px;
-	text-align: center;
-  }
-  
-  /* Subtítulo con detalles más sutiles */
-  .todohome h2 {
-	padding-bottom: 48px;
-	font-size: 28px;
-	font-weight: 300;
-	color: #8b2d8c;
-  }
-  
-  /* Botón principal con un diseño moderno y transiciones */
-  .todohome .button {
-	padding: 13px 45px;
-	font-size: 16px;
-	font-weight: 500;
-	color: white;
-	border-radius: 25px;
-	background: linear-gradient(to right, #d83f45, #f7a9a9);
-	transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Interactividad para el botón en hover */
-  .todohome .button:hover {
-	background: linear-gradient(to right, #f08080, #e57373);
-	transform: scale(1.1);
-  }
-  
-  /* Enlace sin subrayado para el botón */
-  .todohome a.button {
-	text-decoration: none;
-	color: white;
-  }
-  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilado general */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc); /* Gradiente suave en tonos azules */
+    color: #333;
+}
+
+/* Contenedor Principal Home */
+.todohome {
+    margin: 130px 0 40px 0;
+    position: relative;
+}
+
+/* Título principal con tipografía grande y centrada */
+.todohome h1 {
+    position: absolute;
+    top: -140px;
+    width: 100%;
+    font-size: 80px;
+    font-weight: 200;
+    text-align: center;
+    color: #0288d1; /* Azul intenso */
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+}
+
+/* Sección principal con espaciado y centrado */
+.todohome section {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Subtítulo con detalles más sutiles */
+.todohome h2 {
+    padding-bottom: 48px;
+    font-size: 28px;
+    font-weight: 300;
+    color: #0288d1; /* Azul intenso */
+}
+
+/* Botón principal con un diseño moderno y transiciones */
+.todohome .button {
+    padding: 13px 45px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border-radius: 25px;
+    background: linear-gradient(to right, #0288d1, #80d0ff); /* Gradiente azul */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Interactividad para el botón en hover */
+.todohome .button:hover {
+    background: linear-gradient(to right, #01579b, #4fc3f7); /* Gradiente azul oscuro */
+    transform: scale(1.1);
+}
+
+/* Enlace sin subrayado para el botón */
+.todohome a.button {
+    text-decoration: none;
+    color: white;
+}

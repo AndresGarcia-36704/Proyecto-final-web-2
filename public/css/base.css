@@ -1,165 +1,235 @@
-/* Reset para consistencia */
+/* General Reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  }
-  
-  /* Estilado general */
-  body {
-	font-family: 'Arial', sans-serif;
-	background: linear-gradient(135deg, #ffe1e1, #fff0f5);
-	color: #333;
-	min-height: 100vh;
-  }
-  
-  /* Estilado para líneas separadoras con estilo moderno */
-  hr {
-	margin: 20px 0;
-	border: 0;
-	border-top: 1px dashed #db7fa5;
-	border-bottom: 1px dashed #f7d2dc;
-  }
-  
-  /* Enlaces con transición y color */
-  .learn a {
-	font-weight: normal;
-	text-decoration: none;
-	color: #b83f45;
-	transition: color 0.3s ease, text-decoration 0.3s ease;
-  }
-  
-  .learn a:hover {
-	text-decoration: underline;
-	color: #8b2d8c;
-  }
-  
-  /* Encabezados con colores sutiles */
-  .learn h3,
-  .learn h4,
-  .learn h5 {
-	margin: 10px 0;
-	font-weight: 500;
-	line-height: 1.2;
-	color: #8b2d8c;
-  }
-  
-  .learn h3 {
-	font-size: 24px;
-  }
-  
-  .learn h4 {
-	font-size: 18px;
-  }
-  
-  .learn h5 {
-	margin-bottom: 0;
-	font-size: 14px;
-  }
-  
-  /* Listado con mejor diseño */
-  .learn ul {
-	padding: 0;
-	margin: 0 0 30px 25px;
-	list-style-type: disc;
-	color: #555;
-  }
-  
-  .learn li {
-	line-height: 22px;
-  }
-  
-  /* Texto más amigable y claro */
-  .learn p {
-	font-size: 15px;
-	font-weight: 300;
-	line-height: 1.6;
-	margin: 0 0 10px 0;
-	color: #555;
-  }
-  
-  /* Estilado para citas con diseño elegante */
-  .quote {
-	border: none;
-	margin: 20px 0 60px 0;
-	position: relative;
-  }
-  
-  .quote p {
-	font-style: italic;
-	color: #8b2d8c;
-	position: relative;
-  }
-  
-  .quote p:before {
-	content: '“';
-	font-size: 50px;
-	opacity: 0.2;
-	position: absolute;
-	top: -10px;
-	left: 0;
-  }
-  
-  .quote p:after {
-	content: '”';
-	font-size: 50px;
-	opacity: 0.2;
-	position: absolute;
-	bottom: -10px;
-	right: 0;
-  }
-  
-  .quote footer {
-	position: absolute;
-	bottom: -20px;
-	right: 0;
-	font-size: 14px;
-	color: #555;
-  }
-  
-  .quote footer img {
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	object-fit: cover;
-  }
-  
-  .speech-bubble {
-	position: relative;
-	padding: 12px;
-	background: rgba(255, 182, 193, 0.2);
-	border-radius: 10px;
-  }
-  
-  .speech-bubble:after {
-	content: '';
-	position: absolute;
-	top: 100%;
-	right: 10px;
-	border: 8px solid transparent;
-	border-top-color: rgba(255, 182, 193, 0.6);
-  }
-  
-  /* Sección principal interactiva */
-  .learn-bar > .learn {
-	position: absolute;
-	width: 280px;
-	top: 8px;
-	left: -300px;
-	padding: 10px;
-	border-radius: 8px;
-	background: rgba(255, 182, 193, 0.6);
-	transition: left 0.5s ease;
-  }
-  
-  @media (min-width: 899px) {
-	.learn-bar {
-	  width: auto;
-	  padding-left: 300px;
-	}
-  
-	.learn-bar > .learn {
-	  left: 8px;
-	}
-  }
-  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilado general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Fondo gris muy claro */
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Encabezado principal con fondo azul */
+header {
+    background-color: #cce7ff; /* Azul suave */
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #0066cc; /* Azul intenso */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo de navegación */
+.nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    margin: 0 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.nav a {
+    color: #0066cc; /* Azul intenso */
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+    border-bottom: 2px solid #a3c2f7; /* Azul claro */
+}
+
+/* Estilado para botones de usuario */
+.nav button {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #0066cc; /* Azul intenso */
+    height: 36px;
+    padding: 0 8px;
+    transition: 0.3s ease;
+}
+
+.nav button:hover {
+    background-color: #a3c2f7; /* Azul claro */
+    cursor: pointer;
+}
+
+/* Iconos para usuario y logout */
+.nav .user,
+.nav .logout {
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    display: flex;
+    align-items: center;
+}
+
+/* Sección Principal */
+.main-content {
+    margin: 30px auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Botón primario */
+.button-primary {
+    background: #a3c2f7; /* Azul claro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #0066cc; /* Azul intenso */
+}
+
+/* Sección de Aprendizaje */
+.learn h3,
+.learn h4,
+.learn h5 {
+    margin: 10px 0;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #0066cc; /* Azul intenso */
+}
+
+.learn h3 {
+    font-size: 24px;
+}
+
+.learn h4 {
+    font-size: 18px;
+}
+
+.learn h5 {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.learn ul {
+    padding: 0;
+    margin: 0 0 30px 25px;
+    list-style-type: disc;
+    color: #555;
+}
+
+.learn li {
+    line-height: 22px;
+}
+
+.learn p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+/* Estilado de citas */
+.quote {
+    border: none;
+    margin: 20px 0 60px 0;
+    position: relative;
+}
+
+.quote p {
+    font-style: italic;
+    color: #0066cc; /* Azul intenso */
+    position: relative;
+}
+
+.quote p:before {
+    content: '“';
+    font-size: 50px;
+    opacity: 0.2;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.quote p:after {
+    content: '”';
+    font-size: 50px;
+    opacity: 0.2;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+.quote footer {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.quote footer img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Burbuja de diálogo */
+.speech-bubble {
+    position: relative;
+    padding: 12px;
+    background: rgba(163, 194, 247, 0.2); /* Azul claro */
+    border-radius: 10px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    border: 8px solid transparent;
+    border-top-color: rgba(163, 194, 247, 0.6); /* Azul claro */
+}
+
+/* Barra de Aprendizaje */
+.learn-bar > .learn {
+    position: absolute;
+    width: 280px;
+    top: 8px;
+    left: -300px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(163, 194, 247, 0.6); /* Azul claro */
+    transition: left 0.5s ease;
+}
+
+@media (min-width: 899px) {
+    .learn-bar {
+        width: auto;
+        padding-left: 300px;
+    }
+
+    .learn-bar > .learn {
+        left: 8px;
+    }
+}

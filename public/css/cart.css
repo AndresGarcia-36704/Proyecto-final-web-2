@@ -1,9 +1,10 @@
 /* Estilos generales para el cuerpo y el encabezado */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f2f4; /* Beige suave */
+    background-color: #f3f4f6; /* Gris claro moderno */
+    color: #333;
 }
 
 .container {
@@ -15,8 +16,8 @@ body {
 
 h2 {
     text-align: center;
-    font-size: 34px;
-    color: #e91e63; /* Rosa suave */
+    font-size: 32px;
+    color: #1e90ff; /* Azul vibrante */
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -26,7 +27,7 @@ h3 {
     color: #333;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-family: 'Georgia', serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 /* Estilo para la tabla del carrito */
@@ -36,21 +37,25 @@ table {
     border-collapse: collapse;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 table, th, td {
-    border: 1px solid #f8bbd0; /* Rosa claro */
+    border: 1px solid #d1d5db; /* Gris claro */
 }
 
 th, td {
-    padding: 12px;
+    padding: 14px;
     text-align: center;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 th {
-    background-color: #fce4ec; /* Rosa pálido */
-    color: #e91e63; /* Rosa suave */
+    background-color: #1e90ff; /* Azul vibrante */
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.1em;
 }
 
 td {
@@ -58,27 +63,28 @@ td {
 }
 
 td:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9fafb; /* Muy ligero gris */
 }
 
 /* Resumen del carrito */
 .cart-summary {
     margin-top: 30px;
     text-align: center;
-    background-color: #f8bbd0; /* Rosa claro */
+    background-color: #e5e7eb; /* Fondo gris claro */
     border-radius: 8px;
     padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cart-summary h3 {
     font-size: 28px;
-    color: #e91e63;
+    color: #1e90ff;
 }
 
 /* Estilo para el botón de finalizar compra */
 .button {
     display: inline-block;
-    background-color: #e91e63; /* Rosa suave */
+    background-color: #1e90ff; /* Azul vibrante */
     color: white;
     padding: 14px 20px;
     font-size: 18px;
@@ -95,17 +101,17 @@ td:nth-child(even) {
 }
 
 .button:hover {
-    background-color: #c2185b; /* Rosa más oscuro */
+    background-color: #0b78d4; /* Azul más oscuro */
 }
 
 /* Estilo para el botón de "Seguir comprando" */
 .go-back {
-    background-color: #9e9d24; /* Beige-morado suave */
+    background-color: #10b981; /* Verde esmeralda */
     margin-top: 10px;
 }
 
 .go-back:hover {
-    background-color: #7f7d19; /* Beige-morado más oscuro */
+    background-color: #0e8f6e; /* Verde más oscuro */
 }
 
 /* Estilo para el modal */
@@ -136,7 +142,7 @@ td:nth-child(even) {
     border-radius: 8px;
     width: 80%;
     max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close {
@@ -174,7 +180,7 @@ input {
 }
 
 button {
-    background-color: #f85c90; /* Rosa suave */
+    background-color: #1e90ff; /* Azul vibrante */
     color: white;
     border: none;
     padding: 14px 20px;
@@ -184,7 +190,7 @@ button {
 }
 
 button:hover {
-    background-color: #e85791;
+    background-color: #0b78d4;
 }
 
 /* Estilo para los mensajes cuando el carrito está vacío */

@@ -3,13 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fdf6f9;
+    background-color: #f4f4f9; /* Fondo gris muy claro */
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: #ffe4e9;
+    background-color: #cce7ff; /* Azul suave */
     padding: 20px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -25,12 +25,12 @@ header .header-content {
 
 header h1 {
     font-size: 24px;
-    color: #d63384;
+    color: #0066cc; /* Azul intenso */
     font-family: 'Georgia', serif;
 }
 
 header .btn-login {
-    background-color: #d63384;
+    background-color: #0066cc; /* Azul intenso */
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -40,7 +40,7 @@ header .btn-login {
 }
 
 header .btn-login:hover {
-    background-color: #b91c72;
+    background-color: #004999; /* Azul más oscuro */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -52,7 +52,7 @@ main {
 main h1 {
     text-align: center;
     font-size: 32px;
-    color: #d63384;
+    color: #0066cc; /* Azul intenso */
     margin-bottom: 20px;
 }
 
@@ -69,8 +69,8 @@ main h1 {
 .category h2 {
     text-align: center;
     font-size: 20px;
-    color: #d63384;
-    border-bottom: 2px solid #ffe4e9;
+    color: #0066cc; /* Azul intenso */
+    border-bottom: 2px solid #cce7ff; /* Azul suave */
     padding-bottom: 10px;
 }
 
@@ -84,7 +84,7 @@ main h1 {
 
 .product {
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #a3c2f7; /* Azul claro */
     border-radius: 8px;
     width: 200px;
     text-align: center;
@@ -105,7 +105,7 @@ main h1 {
 
 .product p {
     font-size: 16px;
-    color: #d63384;
+    color: #0066cc; /* Azul intenso */
     margin: 10px 0;
 }
 
@@ -116,7 +116,7 @@ main h1 {
 }
 
 button {
-    background-color: #d63384;
+    background-color: #0066cc; /* Azul intenso */
     color: white;
     border: none;
     padding: 8px 12px;
@@ -127,14 +127,14 @@ button {
 }
 
 button:hover {
-    background-color: #b91c72;
+    background-color: #004999; /* Azul más oscuro */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #ffe4e9;
+    background-color: #cce7ff; /* Azul suave */
     color: #666;
     font-size: 14px;
     margin-top: 20px;
